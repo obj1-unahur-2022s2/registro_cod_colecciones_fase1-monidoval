@@ -1,0 +1,26 @@
+import CallOfDuty.*
+
+describe "tests pedidos de COD"{
+		
+	test "prueba"{
+		
+		registroDeAbatidos.agregarAbatidosVariosDias([43,18,49,62,33,39])
+		
+		assert.equals([43,18,49,62,33,39], registroDeAbatidos.abatidosSuperioresA(17))
+		assert.that(registroDeAbatidos.algunDiaSeAbatio(49))
+		assert.notThat(registroDeAbatidos.algunDiaSeAbatio(52))
+		assert.equals(62, registroDeAbatidos.maximoValorDeAbatidos())		
+		assert.equals([18,62], registroDeAbatidos.valoresDeAbatidosPares())
+		assert.notThat(registroDeAbatidos.abatidosEsAcotada(20,100))
+		assert.equals([43,49,62,39], registroDeAbatidos.abatidosSuperioresA(35))
+		assert.equals([48,23,54,67,38,44], registroDeAbatidos.abatidosSumando(5))
+		assert.equals(244, registroDeAbatidos.sumaDelTotalAbatidos())
+		assert.equals(39, registroDeAbatidos.ultimoValorDeAbatidos())
+		assert.equals([49,62], registroDeAbatidos.listaDeAbatidosMayorALaPrimera())
+		assert.that(registroDeAbatidos.algunDiaAbatioMasDe(50))
+		assert.notThat(registroDeAbatidos.todosLosDiasAbatioMasDe(30))
+		
+		}
+	
+	}
+	
